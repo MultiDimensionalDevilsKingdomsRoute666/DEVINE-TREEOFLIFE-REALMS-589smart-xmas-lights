@@ -6,3 +6,21 @@ Server and Rasberry Pi code has been written using Nodejs. The server and the 't
 The rPi is connected to a relay which is responsible of turning on/off the light.
 
 Enjoy :)
+
+
+## Summary
+
+A fork of [mcodetrail/smart-xmas-lights](https://github.com/mcodetrail/smart-xmas-lights). A home-automation project for switching lights over MQTT, with a Node.js server, a Raspberry Pi relay and an Android app.
+
+## What's inside
+
+`Server/` (the Node.js server) and `clients/` (the Raspberry Pi and Android clients).
+
+## How to view or run it
+
+Set up an MQTT broker, run the Node.js server and Pi client code with `npm install` and then `node`, and build the Android app from `clients/`.
+
+## Credit
+
+The original work is by [mcodetrail/smart-xmas-lights](https://github.com/mcodetrail/smart-xmas-lights).
+
