@@ -18,7 +18,11 @@ A fork of [mcodetrail/smart-xmas-lights](https://github.com/mcodetrail/smart-xma
 
 ## How to view or run it
 
-Set up an MQTT broker, run the Node.js server and Pi client code with `npm install` and then `node`, and build the Android app from `clients/`.
+You need an MQTT broker. Both Node.js parts read its address from the `CLOUDMQTT_URL` environment variable.
+
+- **Raspberry Pi client** (`clients/raspberrypi/`): run `npm install`, then `node light.js`. It drives the relay through GPIO using `onoff`.
+- **Server** (`Server/`): an Express app. Run `npm install`. Note that its `npm start` script points to `./bin/www`, which isn't in this repo. `app.js` exports the app without starting a listener, so you need to add a small start file (for example `bin/www` calling `app.listen(3000)`) before running it.
+- **Mobile apps**: a native Android app (Gradle project in `clients/android-app/Casa/`, open it in Android Studio) and an Ionic app (`clients/Ionic-app/`, run `npm install`, then `npm run build`).
 
 ## Credit
 
